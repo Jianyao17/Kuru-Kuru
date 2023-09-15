@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Resources/UI/MainUIStyleSheet.uss?fileID=7433441132597879392&amp;guid=1621f3824d3ecd14686b55909ef1dfb9&amp;type=3#MainUIStyleSheet" />
+    <ui:VisualElement name="root-element" style="flex-grow: 1; justify-content: flex-end;">
+        <ui:VisualElement name="panel-element" style="flex-direction: column; align-items: center; align-self: center; flex-grow: 0; justify-content: flex-end; width: 600px; height: 80px;">
+            <ui:VisualElement name="control-panel" style="background-color: rgb(142, 107, 191); border-left-color: rgb(142, 107, 191); border-right-color: rgb(142, 107, 191); border-top-color: rgb(142, 107, 191); border-bottom-color: rgb(142, 107, 191); border-top-width: 2px; border-bottom-width: 2px; flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="left-panel" class="control-panel-style" style="flex-grow: 1; width: 21%; flex-direction: column; justify-content: space-around; align-self: stretch; align-items: stretch;">
+                    <ui:Label tabindex="-1" text="Herta Count" display-tooltip-when-elided="true" name="title-header" style="font-size: 16px; -unity-font-definition: url(&apos;project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&amp;guid=9767af0e9bda2bd40989765df3bc54d4&amp;type=2#DIN Bold SDF&apos;); -unity-font-style: normal; -unity-text-align: middle-center; flex-grow: 1; flex-shrink: 1; background-color: rgb(142, 107, 191); color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; height: 40%; border-bottom-right-radius: 10px;" />
+                    <ui:Label tabindex="-1" text="0000" display-tooltip-when-elided="true" name="herta-count-label" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&amp;guid=9767af0e9bda2bd40989765df3bc54d4&amp;type=2#DIN Bold SDF&apos;); -unity-text-align: middle-center; font-size: 36px; flex-shrink: 1; flex-grow: 1; height: 60%; margin-bottom: 4px; margin-left: 4px; padding-left: 2px; padding-bottom: 6px; color: rgb(32, 7, 38);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="center-panel" class="control-panel-style" style="padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; background-color: rgb(255, 255, 255); border-top-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <ui:Button text="Clear" display-tooltip-when-elided="true" name="clear-button" class="button-style default-button-style" />
+                    <ui:Button text="Kuru-Kuru~" display-tooltip-when-elided="true" name="kuru-kuru-button" class="button-style default-button-style" />
+                    <ui:Button text="Exit" display-tooltip-when-elided="true" name="exit-button" class="button-style default-button-style" />
+                </ui:VisualElement>
+                <ui:VisualElement name="right-panel" class="control-panel-style" style="flex-grow: 1; width: 21%; flex-direction: column; border-left-width: 0;">
+                    <ui:VisualElement name="framerate-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; align-self: center;">
+                        <ui:Label tabindex="-1" text="FPS" display-tooltip-when-elided="true" name="title-label" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&amp;guid=9767af0e9bda2bd40989765df3bc54d4&amp;type=2#DIN Bold SDF&apos;); -unity-text-align: middle-right; font-size: 28px; flex-shrink: 1; flex-grow: 0; margin-bottom: 4px; margin-left: 4px; color: rgb(32, 7, 38); margin-right: 2px;" />
+                        <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="framerate-count-label" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&amp;guid=9767af0e9bda2bd40989765df3bc54d4&amp;type=2#DIN Bold SDF&apos;); -unity-text-align: middle-left; font-size: 28px; flex-shrink: 0; flex-grow: 0; margin-bottom: 4px; color: rgb(97, 164, 58); margin-left: 2px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="settings-panel" class="settings-panel-default">
+                        <ui:Toggle label="Random Size" name="randSize-toggle" usage-hints="None" class="toggle-style toggle-button-style" style="flex-shrink: 1;" />
+                        <ui:Toggle label="Random Speed" name="randSpeed-toggle" class="toggle-style toggle-button-style" style="flex-shrink: 1;" />
+                        <ui:Toggle label="Dont Destroy" name="dontDestroy-toggle" class="toggle-style toggle-button-style" style="flex-shrink: 1;" />
+                    </ui:VisualElement>
+                    <ui:Button display-tooltip-when-elided="true" name="settings-button" class="purple-button-style" style="flex-direction: row-reverse; padding-bottom: 6px; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                        <ui:Label tabindex="-1" text="Settings" display-tooltip-when-elided="true" name="text-label" style="margin-top: 2px; width: 75%; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-left;" />
+                        <ui:VisualElement name="image-icon" style="flex-grow: 1; display: flex; -unity-background-scale-mode: scale-to-fit; background-image: resource(&apos;UI/settings-icon&apos;); width: 25%; margin-bottom: -2px;" />
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

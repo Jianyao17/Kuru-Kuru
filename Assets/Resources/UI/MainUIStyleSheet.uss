@@ -1,0 +1,231 @@
+.default-button-style {
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    -unity-font-style: normal;
+    font-size: 22px;
+    color: rgb(32, 7, 38);
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgb(230, 230, 230);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(89, 89, 89);
+    border-right-color: rgb(89, 89, 89);
+    border-top-color: rgb(89, 89, 89);
+    border-bottom-color: rgb(89, 89, 89);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -unity-text-align: middle-center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.default-button-style:hover {
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    -unity-font-style: normal;
+    font-size: 22px;
+    color: rgb(32, 7, 38);
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgb(222, 208, 242);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(142, 107, 191);
+    border-right-color: rgb(142, 107, 191);
+    border-top-color: rgb(142, 107, 191);
+    border-bottom-color: rgb(142, 107, 191);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.default-button-style:active {
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    -unity-font-style: normal;
+    font-size: 22px;
+    color: rgb(32, 7, 38);
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgb(174, 143, 217);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(115, 91, 164);
+    border-right-color: rgb(115, 91, 164);
+    border-top-color: rgb(115, 91, 164);
+    border-bottom-color: rgb(115, 91, 164);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.default-button-style:focus {
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    -unity-font-style: normal;
+    font-size: 22px;
+    color: rgb(32, 7, 38);
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-bottom-color: rgb(115, 91, 164);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out-sine;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-color: rgb(115, 91, 164);
+    border-right-color: rgb(115, 91, 164);
+    border-left-color: rgb(115, 91, 164);
+}
+
+.purple-button-style {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 40%;
+    background-color: rgb(142, 107, 191);
+    border-top-left-radius: 10px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    font-size: 16px;
+    background-image: none;
+    color: rgb(255, 255, 255);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    visibility: visible;
+}
+
+.purple-button-style:hover {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 40%;
+    background-color: rgb(162, 131, 204);
+    border-top-left-radius: 10px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    font-size: 16px;
+    background-image: none;
+    color: rgb(255, 255, 255);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    visibility: visible;
+}
+
+.purple-button-style:active {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 40%;
+    border-top-left-radius: 10px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Bold%20SDF.asset?fileID=11400000&guid=9767af0e9bda2bd40989765df3bc54d4&type=2#DIN Bold SDF');
+    font-size: 16px;
+    background-image: none;
+    color: rgb(255, 255, 255);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    visibility: visible;
+    background-color: rgb(115, 91, 164);
+}
+
+.toggle-button-style {
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    justify-content: space-between;
+    -unity-font-definition: url('project://database/Assets/Fonts/DIN%20Font/DIN%20Medium%20SDF.asset?fileID=11400000&guid=ed1c4ed0cb02bd847b40b2a22c1b515e&type=2#DIN Medium SDF');
+    font-size: 13px;
+    color: rgb(32, 7, 38);
+    -unity-text-align: middle-left;
+}
+
+.control-panel-style {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    width: 58%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: stretch;
+}
+
+.settings-panel-default {
+    background-color: rgb(222, 208, 242);
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-left-color: rgb(142, 107, 191);
+    border-right-color: rgb(142, 107, 191);
+    border-top-color: rgb(142, 107, 191);
+    border-bottom-color: rgb(142, 107, 191);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    width: 210px;
+    translate: 0 100%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-sine;
+    opacity: 0;
+}
+
+.settings-panel-visible {
+    background-color: rgb(222, 208, 242);
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-left-color: rgb(142, 107, 191);
+    border-right-color: rgb(142, 107, 191);
+    border-top-color: rgb(142, 107, 191);
+    border-bottom-color: rgb(142, 107, 191);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    width: 210px;
+    translate: 0 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+    transition-property: all;
+    opacity: 1;
+}
