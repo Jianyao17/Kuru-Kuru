@@ -11,6 +11,15 @@ scopes = {
 	"last_search.310DEAF1" = ""
 	"OpenInspectorPreview.310DEAF1" = "0"
 	"currentGroup.310DEAF1" = "all"
+	"last_search.C87CA1ED" = ""
+	"OpenInspectorPreview.C87CA1ED" = "0"
+	"currentGroup.C87CA1ED" = "all"
+	"last_search.956173B0" = "attac"
+	"OpenInspectorPreview.956173B0" = "0"
+	"currentGroup.956173B0" = "all"
+	"last_search.7B5C2356" = ""
+	"OpenInspectorPreview.7B5C2356" = "0"
+	"currentGroup.7B5C2356" = "all"
 }
 providers = {
 	performance = {
@@ -78,10 +87,21 @@ providers = {
 		priority = 85
 		defaultAction = null
 	}
+	archetype = {
+		active = true
+		priority = 2500
+		defaultAction = null
+	}
+	journal = {
+		active = true
+		priority = 2500
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
 recentSearches = [
+	""
 ]
 searchItemFavorites = [
 ]

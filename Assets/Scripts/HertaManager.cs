@@ -23,7 +23,7 @@ public class HertaManager : MonoBehaviour
     private static Camera _camera;
 
     private AudioSource _audioSource;
-    private Vector2 _tempSize = Vector2.one;
+    private Vector2 _tempScreenSize = Vector2.one;
 
     void Awake() 
     {
@@ -36,7 +36,8 @@ public class HertaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_tempSize != _camera.pixelRect.size) RecalculateBounds();
+        // Reclculate Bounds if screen changing
+        if (_tempScreenSize != _camera.pixelRect.size) RecalculateBounds();
 
         foreach (var herta in hertaList)
         {
@@ -61,7 +62,7 @@ public class HertaManager : MonoBehaviour
     // Calculate herta Bounds area in world point
     private void RecalculateBounds()
     {
-        _tempSize = _camera.pixelRect.size;
+        _tempScreenSize = _camera.pixelRect.size;
 
         Vector2 minPos = _camera.ScreenToWorldPoint(new Vector2(0, 78)),
                 maxPos = _camera.ScreenToWorldPoint(_camera.pixelRect.size);
@@ -72,21 +73,25 @@ public class HertaManager : MonoBehaviour
 
     public void SpawnHerta()
     {
+        // Random some value if true
         float radius = randomSize == true ? UnityEngine.Random.Range(2f, 4f) : Radius,
               speed = randomSpeed == true ? UnityEngine.Random.Range(5f, 15f) : Speed,
               lifetime = Lifetime;
 
+        // Spawn herta mechanics
         Herta herta = Instantiate(hertaPrefabs, transform).GetComponent<Herta>();
         herta.Initialize(radius, speed, lifetime);
 
         hertaList.Add(herta);
 
+        // Play SFX
         _audioSource.Stop();
         _audioSource.PlayOneShot(RandomHertaClip());
     }
 
     public void ClearHertaList()
     {
+        // Delete all herta
         hertaList.ForEach(herta => {
             Destroy(herta.gameObject);
         });

@@ -1,3 +1,5 @@
 {
-    "dotnet.defaultSolution": "Kuru-Kuru V3.sln"
+    "dotnet.defaultSolution": "Kuru-Kuru V3.sln",
+    "dotnet.preferCSharpExtension": true,
+    "git.ignoreLimitWarning": true
 }

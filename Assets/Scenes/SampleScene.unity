@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762131435}
   - component: {fileID: 1762131437}
-  - component: {fileID: 1762131436}
+  - component: {fileID: 1762131438}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Player
@@ -248,29 +248,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1762131436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762131434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9443b869ac4e7a143bb3f8252b1dec05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hertaPrefabs: {fileID: 4728392649439564264, guid: 0f8c3689916aae645b07fac27462a559, type: 3}
-  randomSize: 0
-  randomSpeed: 0
-  dontDestroy: 0
-  Radius: 2.74
-  Speed: 9.96
-  Lifetime: 7.18
-  hertaSounds:
-  - {fileID: 8300000, guid: 908bfcf011f1fde41b7847c6a7466ba7, type: 3}
-  - {fileID: 8300000, guid: 82308132b9435134cba86f4e8d9e44af, type: 3}
-  - {fileID: 8300000, guid: 8a61233f6c4098e4e84b6568a2d843a0, type: 3}
 --- !u!82 &1762131437
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367,6 +344,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1762131438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762131434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071759fa1c54ba84e9dcf58a3dda60c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hertaMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  hertaMaterial: {fileID: 2100000, guid: 0bd5e455de236e94e97ef8b4cec4e61b, type: 2}
+  hertaEntityCount: 0
+  SpawnUsingCursor: 1
+  HertaFrameCount: 6
+  FramesPerSecond: 12
+  HertaRadius: 2
+  HertaSpeed: 12.16
+  HertaLifetime: 9.16
+  randomSize: 0
+  randomSpeed: 0
+  dontDestroy: 0
+  hertaSounds:
+  - {fileID: 8300000, guid: 8a61233f6c4098e4e84b6568a2d843a0, type: 3}
+  - {fileID: 8300000, guid: 908bfcf011f1fde41b7847c6a7466ba7, type: 3}
+  - {fileID: 8300000, guid: 82308132b9435134cba86f4e8d9e44af, type: 3}
 --- !u!1 &1855774050
 GameObject:
   m_ObjectHideFlags: 0

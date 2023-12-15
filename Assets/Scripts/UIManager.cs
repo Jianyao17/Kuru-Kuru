@@ -1,10 +1,14 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour
 {
-    HertaManager manager;
+    public static float PanelHeight { get { return panelElement.resolvedStyle.height;  } }
+    public static VisualElement panelElement;
+
+    ECS_HertaManager manager;
     FPSCounter fpsCounter;
 
     VisualElement rootElement, settingsPanel;
@@ -12,12 +16,15 @@ public class UIManager : MonoBehaviour
     Toggle rndSizeTgl, rndSpdTgl, dontDestroyTgl;
     Label countDisplay, fpsDisplay;
 
+    private string[] suffixes = new string[] { "", "K", "M", "B", "T", "Q" };
+
     private void Awake()
     {
         fpsCounter = gameObject.GetComponent<FPSCounter>();
-        manager = GameObject.FindGameObjectWithTag("Player").GetComponent<HertaManager>();
+        manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ECS_HertaManager>();
         rootElement = GetComponent<UIDocument>().rootVisualElement;
 
+        panelElement = rootElement.Q<VisualElement>("panel-element");
         settingsPanel = rootElement.Q<VisualElement>("settings-panel");
         fpsDisplay = rootElement.Q<Label>("framerate-count-label");
         countDisplay = rootElement.Q<Label>("herta-count-label");
@@ -32,8 +39,8 @@ public class UIManager : MonoBehaviour
         exitButton = rootElement.Q<Button>("exit-button");
 
         settingsButton.clicked += SettingsButton_clicked;
-        clearButton.clicked += manager.ClearHertaList;
-        kuruButton.clicked += manager.SpawnHerta;
+        clearButton.clicked += manager.ClearHertaEntity;
+        kuruButton.clicked += manager.SpawnHertaEntity;
         exitButton.clicked += ExitButton_clicked;
 
         rndSizeTgl.RegisterValueChangedCallback(randomSizeToggle);
@@ -62,6 +69,7 @@ public class UIManager : MonoBehaviour
             countDisplay.text = manager.HertaCount.ToString();
 
         fpsDisplay.text = fpsCounter.CalculateFPS().ToString("000");
+        //PanelHeight = panelElement.resolvedStyle.height;
     }
 
     private void SettingsButton_clicked()
@@ -76,5 +84,16 @@ public class UIManager : MonoBehaviour
     private void ExitButton_clicked()
     {
         Application.Quit();
+    }
+
+    private string ShortenNumbers(float value)
+    {
+        string shortenNumbers = string.Empty;
+
+        if (1000000 <= value) shortenNumbers = Math.Floor(value / 1000000).ToString() + "K";
+        else if (1000 <= value) shortenNumbers = Math.Floor(value / 1000).ToString() + "K";
+        else shortenNumbers = value.ToString();
+        
+        return shortenNumbers;
     }
 }
