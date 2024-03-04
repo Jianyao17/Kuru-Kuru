@@ -8,7 +8,7 @@ public class FPSCounter : MonoBehaviour
     private void Awake()
     {
         frameDeltaTimeArray = new float[50];
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 300;
     }
 
     private void Update()

@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     ECS_HertaManager manager;
     FPSCounter fpsCounter;
 
+    UIDocument UIdocument;
     VisualElement rootElement, settingsPanel;
     Button clearButton, kuruButton, exitButton, settingsButton;
     Toggle rndSizeTgl, rndSpdTgl, dontDestroyTgl;
@@ -22,7 +23,8 @@ public class UIManager : MonoBehaviour
     {
         fpsCounter = gameObject.GetComponent<FPSCounter>();
         manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ECS_HertaManager>();
-        rootElement = GetComponent<UIDocument>().rootVisualElement;
+        UIdocument = GetComponent<UIDocument>();
+        rootElement = UIdocument.rootVisualElement;
 
         panelElement = rootElement.Q<VisualElement>("panel-element");
         settingsPanel = rootElement.Q<VisualElement>("settings-panel");
@@ -69,7 +71,12 @@ public class UIManager : MonoBehaviour
             countDisplay.text = manager.HertaCount.ToString();
 
         fpsDisplay.text = fpsCounter.CalculateFPS().ToString("000");
-        //PanelHeight = panelElement.resolvedStyle.height;
+
+        //Debug.Log(Screen.orientation);
+        //var isLandscape = Screen.orientation == ScreenOrientation.LandscapeLeft || Screen.orientation == ScreenOrientation.LandscapeRight;
+        //var isPortrait = Screen.orientation == ScreenOrientation.Portrait || Screen.orientation == ScreenOrientation.PortraitUpsideDown;
+        //if (isLandscape) UIdocument.panelSettings.match = 1f;
+        //else if (isPortrait) UIdocument.panelSettings.match = 0f;
     }
 
     private void SettingsButton_clicked()

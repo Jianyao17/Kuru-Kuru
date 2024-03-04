@@ -21,8 +21,10 @@ public partial class HertaLifetimeSystem : SystemBase
         var hertaEntities = ECS_HertaManager.HertaEntities;
         var DontDestroy = ECS_HertaManager.DontDestroyEntity;
 
+        if (DontDestroy == true) return; // Return if dont destroy
+
         Entities.ForEach((Entity entity, int entityInQueryIndex, in HertaComponent hertaComponent) => {
-            if (!DontDestroy && hertaComponent.lifeTime <= 0f) 
+            if (hertaComponent.lifeTime <= 0f) 
             {
                 // Destroy Entity & remove from list if Lifetime <= 0 and DontDestroyEntity = false
                 hertaEntities.Remove(entity);
